@@ -1,0 +1,64 @@
+﻿Build started 18/05/2011 19:03:07.
+     1>Project "C:\Users\user\Documents\Visual Studio 2010\Projects\IFly_737NG_Gauges\737NG_SDK_EXE.vcxproj" on node 2 (rebuild target(s)).
+     1>CoreClean:
+         cd source
+         nmake clean
+         
+         Microsoft (R) Program Maintenance Utility Version 10.00.30319.01
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         	del ..\Debug\*.exp
+         	del ..\Debug\*.gau
+         	del ..\Debug\*.lib
+         	del *.obj
+         	del *.res
+       Rebuild:
+         cd source
+         nmake clean
+         nmake
+         
+         Microsoft (R) Program Maintenance Utility Version 10.00.30319.01
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         	del ..\Debug\*.exp
+         Could Not Find C:\Users\user\Documents\Visual Studio 2010\Projects\IFly_737NG_Gauges\Debug\*.exp
+         	del ..\Debug\*.gau
+         Could Not Find C:\Users\user\Documents\Visual Studio 2010\Projects\IFly_737NG_Gauges\Debug\*.gau
+         	del ..\Debug\*.lib
+         Could Not Find C:\Users\user\Documents\Visual Studio 2010\Projects\IFly_737NG_Gauges\Debug\*.lib
+         	del *.obj
+         Could Not Find C:\Users\user\Documents\Visual Studio 2010\Projects\IFly_737NG_Gauges\Source\*.obj
+         	del *.res
+         Could Not Find C:\Users\user\Documents\Visual Studio 2010\Projects\IFly_737NG_Gauges\Source\*.res
+         	cl  -c -I..\inc IFLY_NG_GAUGE_PLUGIN.c
+         
+         Microsoft (R) Program Maintenance Utility Version 10.00.30319.01
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         IFLY_NG_GAUGE_PLUGIN.c
+         Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+     1>c:\users\user\documents\visual studio 2010\projects\ifly_737ng_gauges\source\IFLY_NG_GAUGE_PLUGIN.Sound.c(81): warning C4047: 'initializing' : 'ID' differs in levels of indirection from 'void *'
+     1>c:\users\user\documents\visual studio 2010\projects\ifly_737ng_gauges\source\IFLY_NG_GAUGE_PLUGIN.Sound.c(473): warning C4047: 'initializing' : 'ID' differs in levels of indirection from 'void *'
+     1>c:\users\user\documents\visual studio 2010\projects\ifly_737ng_gauges\source\IFLY_NG_GAUGE_PLUGIN.Sound.c(492): warning C4047: 'initializing' : 'ID' differs in levels of indirection from 'void *'
+     1>c:\users\user\documents\visual studio 2010\projects\ifly_737ng_gauges\source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(38): warning C4047: 'initializing' : 'ID' differs in levels of indirection from 'void *'
+     1>c:\users\user\documents\visual studio 2010\projects\ifly_737ng_gauges\source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(120): warning C4047: 'initializing' : 'ID' differs in levels of indirection from 'void *'
+     1>c:\users\user\documents\visual studio 2010\projects\ifly_737ng_gauges\source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(139): warning C4047: 'initializing' : 'ID' differs in levels of indirection from 'void *'
+         	rc -r -I..\inc SDK.rc
+         Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+         
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         
+         	link  /dll /out:..\Debug\IFLY_NG_GAUGE_PLUGIN.gau IFLY_NG_GAUGE_PLUGIN.obj SDK.res user32.lib gdi32.lib kernel32.lib ..\lib\FSUIPC_User.lib ..\lib\fmodex_vc.lib
+         Microsoft (R) Incremental Linker Version 10.00.30319.01
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+            Creating library ..\Debug\IFLY_NG_GAUGE_PLUGIN.lib and object ..\Debug\IFLY_NG_GAUGE_PLUGIN.exp
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>Done Building Project "C:\Users\user\Documents\Visual Studio 2010\Projects\IFly_737NG_Gauges\737NG_SDK_EXE.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.91

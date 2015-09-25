@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!ELEMENT Gauge (Container? , Update? , Image? , Size? , Element* , Mouse?)>
+
+<!ATTLIST Gauge  Name    CDATA  #REQUIRED
+                 Version CDATA  #FIXED "1.0" >
+
+
+<!ELEMENT Container EMPTY >
+
+
+<!ELEMENT Update EMPTY >
+
+<!ATTLIST Update  Frequency CDATA  #IMPLIED >
+
+
+<!ELEMENT Image (Axis? , Nonlinearity?) >
+
+<!ATTLIST Image  Name            CDATA  #REQUIRED
+                 ImageSizes      CDATA  #IMPLIED
+                 DegreesPointsTo CDATA  '0'
+                 Bright          (Yes | No )  'No'
+                 PointsTo        (East | South | West | North )  'East'
+                 UseTransparency (Yes | No )  'Yes'
+                 Luminous        (Yes | No )  'No'
+                 Alpha           (Yes | No )  'No'
+                 NoBilinear      (Yes | No )  'No' >
+
+
+<!ELEMENT Axis EMPTY >
+
+<!ATTLIST Axis  X CDATA  #REQUIRED
+                Y CDATA  #REQUIRED >
+
+
+<!ELEMENT Nonlinearity (Item, Item+) >
+
+
+<!ELEMENT Item EMPTY >
+
+<!ATTLIST Item  Value   CDATA  #REQUIRED
+                Degrees CDATA  #IMPLIED
+				Radians CDATA  #IMPLIED
+                X       CDATA  #IMPLIED
+                Y       CDATA  #IMPLIED >
+
+
+<!ELEMENT Size EMPTY>
+
+<!ATTLIST Size  X CDATA  #REQUIRED
+                Y CDATA  #REQUIRED >
+
+
+<!ELEMENT Element ((Element | Image | MaskImage | Text | Position | Size | Visible | Select | SelectRange | Shift | Rotate | Clip | Failures)*) >
+
+
+<!ELEMENT MaskImage (Axis? , Nonlinearity?) >
+
+<!ATTLIST MaskImage  Name            CDATA  #REQUIRED
+                     ImageSizes      CDATA  #IMPLIED
+                     DegreesPointsTo CDATA  '0'
+                     Bright          (Yes | No )  'No'
+                     PointsTo        (East | South | West | North )  'East'
+                     UseTransparency (Yes | No )  'Yes'
+                     Luminous        (Yes | No )  'No'
+                     Alpha           (Yes | No )  'No'
+                     NoBilinear      (Yes | No )  'No' >
+
+
+<!ELEMENT Text (String , Hilight? , Failures? , Axis? , Nonlinearity?) >
+
+<!ATTLIST Text  X               CDATA  #REQUIRED
+                Y               CDATA  #REQUIRED
+                Length          CDATA  #REQUIRED
+                Fixed           (Yes | No )  'No'
+                WidthFit        (Yes | No )  'No'
+                Font            CDATA  #REQUIRED
+                FontWeight      CDATA  '400'
+                FontHeight      CDATA  '0'
+                Charset         CDATA  #IMPLIED
+                Attributes      CDATA  'Normal'
+                Adjust          (Left | Center | Right )  'Left'
+                VerticalAdjust  (Top | Center | Bottom )  'Top'
+                Multiline       (Yes | No )  #IMPLIED
+                Color           CDATA  #IMPLIED
+                BackgroundColor CDATA  #IMPLIED
+                HilightColor    CDATA  #IMPLIED
+                Bright          (Yes | No )  'No'
+                UseTransparency (Yes | No )  'Yes'
+                Luminous        (Yes | No )  'No'
+                Alpha           (Yes | No )  'No'
+                NoBilinear      (Yes | No )  'No'
+                DegreesPointsTo CDATA  '0'
+                PointsTo        (East | South | West | North )  'East' >
+
+
+<!ELEMENT String (#PCDATA)* >
+
+
+<!ELEMENT Hilight 
+            (SELECT_NONE | SELECT_1 | SELECT_ZOOM | SELECT_MAGNETO | SELECT_COM_WHOLE | SELECT_COM_FRACTION | SELECT_NAV1_WHOLE | SELECT_NAV1_FRACTION | SELECT_NAV2_WHOLE | SELECT_NAV2_FRACTION | 
+			 SELECT_XPNDR_1000 | SELECT_XPNDR_0100 | SELECT_XPNDR_0010 | SELECT_XPNDR_0001 | SELECT_VOR1 | SELECT_VOR2 | SELECT_ENGINE | SELECT_DME1 | SELECT_DME2 | SELECT_ADF_100 | SELECT_ADF_010 |
+			 SELECT_ADF_001 | SELECT_EGT_BUG | SELECT_SIM_RATE | SELECT_CLOCK_HOURS | SELECT_CLOCK_MINUTES | SELECT_CLOCK_SECONDS | SELECT_COM2_WHOLE | SELECT_COM2_FRACTION | SELECT_ADF_TENTHS)* >
+
+<!ELEMENT SELECT_NONE EMPTY > <!ATTLIST SELECT_NONE Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_1 EMPTY > <!ATTLIST SELECT_1 Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_ZOOM EMPTY > <!ATTLIST SELECT_ZOOM Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_MAGNETO EMPTY > <!ATTLIST SELECT_MAGNETO Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_COM_WHOLE EMPTY > <!ATTLIST SELECT_COM_WHOLE Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_COM_FRACTION EMPTY > <!ATTLIST SELECT_COM_FRACTION Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_NAV1_WHOLE EMPTY > <!ATTLIST SELECT_NAV1_WHOLE Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_NAV1_FRACTION EMPTY > <!ATTLIST SELECT_NAV1_FRACTION Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_NAV2_WHOLE EMPTY > <!ATTLIST SELECT_NAV2_WHOLE Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_NAV2_FRACTION EMPTY > <!ATTLIST SELECT_NAV2_FRACTION Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_XPNDR_1000 EMPTY > <!ATTLIST SELECT_XPNDR_1000 Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_XPNDR_0100 EMPTY > <!ATTLIST SELECT_XPNDR_0100 Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_XPNDR_0010 EMPTY > <!ATTLIST SELECT_XPNDR_0010 Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_XPNDR_0001 EMPTY > <!ATTLIST SELECT_XPNDR_0001 Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_VOR1 EMPTY > <!ATTLIST SELECT_VOR1 Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_VOR2 EMPTY > <!ATTLIST SELECT_VOR2 Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_ENGINE EMPTY > <!ATTLIST SELECT_ENGINE Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_DME1 EMPTY > <!ATTLIST SELECT_DME1 Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_DME2 EMPTY > <!ATTLIST SELECT_DME2 Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_ADF_100 EMPTY > <!ATTLIST SELECT_ADF_100 Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_ADF_010 EMPTY > <!ATTLIST SELECT_ADF_010 Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_ADF_001 EMPTY > <!ATTLIST SELECT_ADF_001 Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_EGT_BUG EMPTY > <!ATTLIST SELECT_EGT_BUG Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_SIM_RATE EMPTY > <!ATTLIST SELECT_SIM_RATE Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_CLOCK_HOURS EMPTY > <!ATTLIST SELECT_CLOCK_HOURS Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_CLOCK_MINUTES EMPTY > <!ATTLIST SELECT_CLOCK_MINUTES Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_CLOCK_SECONDS EMPTY > <!ATTLIST SELECT_CLOCK_SECONDS Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_COM2_WHOLE EMPTY > <!ATTLIST SELECT_COM2_WHOLE Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_COM2_FRACTION EMPTY > <!ATTLIST SELECT_COM2_FRACTION Start CDATA #REQUIRED End CDATA #REQUIRED >
+<!ELEMENT SELECT_ADF_TENTHS EMPTY > <!ATTLIST SELECT_ADF_TENTHS Start CDATA #REQUIRED End CDATA #REQUIRED >
+
+
+<!ELEMENT Failures 
+        (FAIL_SYSTEM_ENGINE | FAIL_SYSTEM_PITOT_STATIC | FAIL_SYSTEM_VACUUM | FAIL_GAUGE_ADF | FAIL_GAUGE_AIRSPEED | FAIL_GAUGE_ALTIMETER | FAIL_GAUGE_ATTITUDE | FAIL_GAUGE_COMMUNICATIONS |
+         FAIL_GAUGE_FUEL_INDICATORS | FAIL_GAUGE_GYRO_HEADING | FAIL_GAUGE_MAGNETIC_COMPASS | FAIL_GAUGE_NAVIGATION | FAIL_GAUGE_NAVIGATION_VOR1 | FAIL_GAUGE_NAVIGATION_VOR2 | FAIL_GAUGE_NAVIGATION_BOTH |
+         FAIL_GAUGE_TRANSPONDER | FAIL_GAUGE_TURN_COORDINATOR | FAIL_GAUGE_VERTICAL_SPEED | FAIL_SYSTEM_ELECTRICAL_PANELS | FAIL_SYSTEM_ELECTRICAL_AVIONICS)* >
+
+<!ELEMENT FAIL_SYSTEM_ENGINE EMPTY > <!ATTLIST FAIL_SYSTEM_ENGINE Action CDATA #REQUIRED >
+<!ELEMENT FAIL_SYSTEM_PITOT_STATIC EMPTY > <!ATTLIST FAIL_SYSTEM_PITOT_STATIC Action CDATA #REQUIRED >
+<!ELEMENT FAIL_SYSTEM_VACUUM EMPTY > <!ATTLIST FAIL_SYSTEM_VACUUM Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_ADF EMPTY > <!ATTLIST FAIL_GAUGE_ADF Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_AIRSPEED EMPTY > <!ATTLIST FAIL_GAUGE_AIRSPEED Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_ALTIMETER EMPTY > <!ATTLIST FAIL_GAUGE_ALTIMETER Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_ATTITUDE EMPTY > <!ATTLIST FAIL_GAUGE_ATTITUDE Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_COMMUNICATIONS EMPTY > <!ATTLIST FAIL_GAUGE_COMMUNICATIONS Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_FUEL_INDICATORS EMPTY > <!ATTLIST FAIL_GAUGE_FUEL_INDICATORS Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_GYRO_HEADING EMPTY > <!ATTLIST FAIL_GAUGE_GYRO_HEADING Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_MAGNETIC_COMPASS EMPTY > <!ATTLIST FAIL_GAUGE_MAGNETIC_COMPASS Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_NAVIGATION EMPTY > <!ATTLIST FAIL_GAUGE_NAVIGATION Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_NAVIGATION_VOR1 EMPTY > <!ATTLIST FAIL_GAUGE_NAVIGATION_VOR1 Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_NAVIGATION_VOR2 EMPTY > <!ATTLIST FAIL_GAUGE_NAVIGATION_VOR2 Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_NAVIGATION_BOTH EMPTY > <!ATTLIST FAIL_GAUGE_NAVIGATION_BOTH Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_TRANSPONDER EMPTY > <!ATTLIST FAIL_GAUGE_TRANSPONDER Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_TURN_COORDINATOR EMPTY > <!ATTLIST FAIL_GAUGE_TURN_COORDINATOR Action CDATA #REQUIRED >
+<!ELEMENT FAIL_GAUGE_VERTICAL_SPEED EMPTY > <!ATTLIST FAIL_GAUGE_VERTICAL_SPEED Action CDATA #REQUIRED >
+<!ELEMENT FAIL_SYSTEM_ELECTRICAL_PANELS EMPTY > <!ATTLIST FAIL_SYSTEM_ELECTRICAL_PANELS Action CDATA #REQUIRED >
+<!ELEMENT FAIL_SYSTEM_ELECTRICAL_AVIONICS EMPTY > <!ATTLIST FAIL_SYSTEM_ELECTRICAL_AVIONICS Action CDATA #REQUIRED >
+
+<!ELEMENT Position EMPTY >
+
+<!ATTLIST Position  X CDATA  #REQUIRED
+                    Y CDATA  #REQUIRED >
+
+
+<!ELEMENT Visible (#PCDATA)* >
+
+
+<!ELEMENT Select (Value , Delay? , Failures? , Image? , Case+) >
+
+
+<!ELEMENT Value (#PCDATA)* >
+
+<!ATTLIST Value  Minimum  CDATA  #IMPLIED
+                 Maximum  CDATA  #IMPLIED >
+
+
+<!ELEMENT Delay EMPTY >
+
+<!ATTLIST Delay  ValuePerSecond   CDATA  #IMPLIED
+                 DegreesPerSecond CDATA  #IMPLIED 
+                 RadiansPerSecond CDATA  #IMPLIED 
+                 PixelsPerSecond  CDATA  #IMPLIED >
+
+
+<!ELEMENT Case (Image) >
+
+<!ATTLIST Case  Value   CDATA  #IMPLIED 
+				Minimum CDATA  #IMPLIED 
+				Maximum CDATA  #IMPLIED >
+
+
+<!ELEMENT SelectRange (Value , Delay? , Failures? , Image? , Case+) >
+
+
+<!ELEMENT Shift (Value , Center? , Nonlinearity? , Scale? , Limit? , Delay? , Failures?) >
+
+
+<!ELEMENT Center EMPTY >
+
+<!ATTLIST Center  X CDATA  #REQUIRED
+                  Y CDATA  #REQUIRED >
+
+
+<!ELEMENT Scale EMPTY >
+
+<!ATTLIST Scale  X CDATA  #REQUIRED
+                 Y CDATA  #REQUIRED >
+
+
+<!ELEMENT Limit EMPTY >
+
+<!ATTLIST Limit   Top    CDATA  #REQUIRED
+                  Left   CDATA  #REQUIRED
+                  Bottom CDATA  #IMPLIED
+                  Right  CDATA  #IMPLIED
+				  Width	 CDATA  #IMPLIED
+				  Height CDATA  #IMPLIED >
+
+
+<!ELEMENT Rotate (Value , Center , Nonlinearity? , Scale? , Limit? , Delay? , Failures?) >
+
+
+<!ELEMENT Clip EMPTY >
+
+<!ATTLIST Clip    Top    CDATA  #IMPLIED
+                  Left   CDATA  #IMPLIED
+                  Bottom CDATA  #IMPLIED
+                  Right  CDATA  #IMPLIED
+				  Width	 CDATA  #IMPLIED
+				  Height CDATA  #IMPLIED >
+
+
+<!ELEMENT Mouse (Help? , Tooltip? , Cursor? , Click?, Area*) >
+
+
+<!ELEMENT Area  (Help? , Tooltip? , Cursor? , Click?, Area*) >
+
+<!ATTLIST Area    Top    CDATA  #REQUIRED
+                  Left   CDATA  #REQUIRED
+                  Bottom CDATA  #IMPLIED
+                  Right  CDATA  #IMPLIED
+				  Width	 CDATA  #IMPLIED
+				  Height CDATA  #IMPLIED >
+
+
+<!ELEMENT Help EMPTY >
+
+<!ATTLIST Help  ID CDATA  #REQUIRED >
+
+
+<!ELEMENT Tooltip (#PCDATA)* >
+
+<!ATTLIST Tooltip  ID        CDATA  #IMPLIED 
+				   MetricID  CDATA  #IMPLIED 
+				   EnglishID CDATA  #IMPLIED >
+
+
+<!ELEMENT Cursor EMPTY>
+
+<!ATTLIST Cursor Type (None | Normal | UpArrow | DownArrow | LeftArrow | RightArrow | Hand | Crosshair)  'Normal' >
+
+
+<!ELEMENT Click (#PCDATA)* >
+
+<!ATTLIST Click Kind           CDATA 'LeftSingle'
+                Repeat         (Yes | No) 'No'
+				MouseWheelFlip (Yes | No) 'No'
+				Event          CDATA #IMPLIED >

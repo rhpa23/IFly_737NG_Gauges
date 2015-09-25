@@ -1,0 +1,633 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<Schema name = "gauges.xdr"
+	 xmlns = "urn:schemas-microsoft-com:xml-data"
+	 xmlns:dt = "urn:schemas-microsoft-com:datatypes">
+	<ElementType name = "Gauge" content = "eltOnly" order = "seq" model = "closed">
+		<AttributeType name = "Name" dt:type = "string" required = "yes"/>
+		<AttributeType name = "Version" dt:type = "string" default = "1.0" required = "yes"/>
+		<attribute type = "Name"/>
+		<attribute type = "Version"/>
+		<element type = "Container" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Update" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Image" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Size" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Element" minOccurs = "0" maxOccurs = "*"/>
+		<element type = "Mouse" minOccurs = "0" maxOccurs = "1"/>
+	</ElementType>
+	<ElementType name = "Container" content = "empty" model = "closed"/>
+	<ElementType name = "Update" content = "empty" model = "closed">
+		<AttributeType name = "Frequency" dt:type = "number"/>
+		<attribute type = "Frequency"/>
+	</ElementType>
+	<ElementType name = "Image" content = "eltOnly" order = "seq" model = "closed">
+		<AttributeType name = "Name" dt:type = "string" required = "yes"/>
+		<AttributeType name = "ImageSizes" dt:type = "string"/>
+		<AttributeType name = "DegreesPointsTo" dt:type = "number" default = "0"/>
+		<AttributeType name = "Bright" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "PointsTo" dt:type = "enumeration" dt:values = "East South West North" default = "East"/>
+		<AttributeType name = "UseTransparency" dt:type = "enumeration" dt:values = "Yes No" default = "Yes"/>
+		<AttributeType name = "Luminous" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "Alpha" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "NoBilinear" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<attribute type = "Name"/>
+		<attribute type = "ImageSizes"/>
+		<attribute type = "DegreesPointsTo"/>
+		<attribute type = "Bright"/>
+		<attribute type = "PointsTo"/>
+		<attribute type = "UseTransparency"/>
+		<attribute type = "Luminous"/>
+		<attribute type = "Alpha"/>
+		<attribute type = "NoBilinear"/>
+		<element type = "Axis" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Nonlinearity" minOccurs = "0" maxOccurs = "1"/>
+	</ElementType>
+	<ElementType name = "Axis" content = "empty" model = "closed">
+		<AttributeType name = "X" dt:type = "number" required = "yes"/>
+		<AttributeType name = "Y" dt:type = "number" required = "yes"/>
+		<attribute type = "X"/>
+		<attribute type = "Y"/>
+	</ElementType>
+	<ElementType name = "Nonlinearity" content = "eltOnly" order = "seq" model = "closed">
+		<element type = "Item"/>
+		<element type = "Item" minOccurs = "1" maxOccurs = "*"/>
+	</ElementType>
+	<ElementType name = "Item" content = "empty" model = "closed">
+		<AttributeType name = "Value" dt:type = "string" required = "yes"/>
+		<AttributeType name = "Degrees" dt:type = "number"/>
+		<AttributeType name = "Radians" dt:type = "number"/>
+		<AttributeType name = "X" dt:type = "number"/>
+		<AttributeType name = "Y" dt:type = "number"/>
+		<attribute type = "Value"/>
+		<attribute type = "Degrees"/>
+		<attribute type = "Radians"/>
+		<attribute type = "X"/>
+		<attribute type = "Y"/>
+	</ElementType>
+	<ElementType name = "Size" content = "empty" model = "closed">
+		<AttributeType name = "X" dt:type = "number" required = "yes"/>
+		<AttributeType name = "Y" dt:type = "number" required = "yes"/>
+		<attribute type = "X"/>
+		<attribute type = "Y"/>
+	</ElementType>
+	<ElementType name = "Element" content = "eltOnly" order = "many" model = "closed">
+		<element type = "Element"/>
+		<element type = "Image"/>
+		<element type = "MaskImage"/>
+		<element type = "Text"/>
+		<element type = "Position"/>
+		<element type = "Size"/>
+		<element type = "Visible"/>
+		<element type = "Select"/>
+		<element type = "SelectRange"/>
+		<element type = "Shift"/>
+		<element type = "Rotate"/>
+		<element type = "Clip"/>
+		<element type = "Failures"/>
+	</ElementType>
+	<ElementType name = "MaskImage" content = "eltOnly" order = "seq" model = "closed">
+		<AttributeType name = "Name" dt:type = "string" required = "yes"/>
+		<AttributeType name = "ImageSizes" dt:type = "string"/>
+		<AttributeType name = "DegreesPointsTo" dt:type = "number" default = "0"/>
+		<AttributeType name = "Bright" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "PointsTo" dt:type = "enumeration" dt:values = "East South West North" default = "East"/>
+		<AttributeType name = "UseTransparency" dt:type = "enumeration" dt:values = "Yes No" default = "Yes"/>
+		<AttributeType name = "Luminous" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "Alpha" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "NoBilinear" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<attribute type = "Name"/>
+		<attribute type = "ImageSizes"/>
+		<attribute type = "DegreesPointsTo"/>
+		<attribute type = "Bright"/>
+		<attribute type = "PointsTo"/>
+		<attribute type = "UseTransparency"/>
+		<attribute type = "Luminous"/>
+		<attribute type = "Alpha"/>
+		<attribute type = "NoBilinear"/>
+		<element type = "Axis" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Nonlinearity" minOccurs = "0" maxOccurs = "1"/>
+	</ElementType>
+	<ElementType name = "Text" content = "eltOnly" order = "seq" model = "closed">
+		<AttributeType name = "X" dt:type = "number" required = "yes"/>
+		<AttributeType name = "Y" dt:type = "number" required = "yes"/>
+		<AttributeType name = "Length" dt:type = "int" required = "yes"/>
+		<AttributeType name = "Fixed" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "WidthFit" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "Font" dt:type = "string" required = "yes"/>
+		<AttributeType name = "FontWeight" dt:type = "number" default = "400"/>
+		<AttributeType name = "FontHeight" dt:type = "number" default = "0"/>
+		<AttributeType name = "Charset" dt:type = "string"/>
+		<AttributeType name = "Attributes" dt:type = "string" default = "Normal"/>
+		<AttributeType name = "Adjust" dt:type = "enumeration" dt:values = "Left Center Right" default = "Left"/>
+		<AttributeType name = "VerticalAdjust" dt:type = "enumeration" dt:values = "Top Center Bottom" default = "Top"/>
+		<AttributeType name = "Multiline" dt:type = "enumeration" dt:values = "Yes No"/>
+		<AttributeType name = "Color" dt:type = "string"/>
+		<AttributeType name = "BackgroundColor" dt:type = "string"/>
+		<AttributeType name = "HilightColor" dt:type = "string"/>
+		<AttributeType name = "Bright" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "UseTransparency" dt:type = "enumeration" dt:values = "Yes No" default = "Yes"/>
+		<AttributeType name = "Luminous" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "Alpha" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "NoBilinear" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "DegreesPointsTo" dt:type = "number" default = "0"/>
+		<AttributeType name = "PointsTo" dt:type = "enumeration" dt:values = "East South West North" default = "East"/>
+		<attribute type = "X"/>
+		<attribute type = "Y"/>
+		<attribute type = "Length"/>
+		<attribute type = "Fixed"/>
+		<attribute type = "WidthFit"/>
+		<attribute type = "Font"/>
+		<attribute type = "FontWeight"/>
+		<attribute type = "FontHeight"/>
+		<attribute type = "Charset"/>
+		<attribute type = "Attributes"/>
+		<attribute type = "Adjust"/>
+		<attribute type = "VerticalAdjust"/>
+		<attribute type = "Multiline"/>
+		<attribute type = "Color"/>
+		<attribute type = "BackgroundColor"/>
+		<attribute type = "HilightColor"/>
+		<attribute type = "Bright"/>
+		<attribute type = "UseTransparency"/>
+		<attribute type = "Luminous"/>
+		<attribute type = "Alpha"/>
+		<attribute type = "NoBilinear"/>
+		<attribute type = "DegreesPointsTo"/>
+		<attribute type = "PointsTo"/>
+		<element type = "String"/>
+		<element type = "Hilight" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Failures" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Axis" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Nonlinearity" minOccurs = "0" maxOccurs = "1"/>
+	</ElementType>
+	<ElementType name = "String" content = "textOnly" model = "closed"/>
+	<ElementType name = "Hilight" content = "eltOnly" order = "many" model = "closed">
+		<element type = "SELECT_NONE"/>
+		<element type = "SELECT_1"/>
+		<element type = "SELECT_ZOOM"/>
+		<element type = "SELECT_MAGNETO"/>
+		<element type = "SELECT_COM_WHOLE"/>
+		<element type = "SELECT_COM_FRACTION"/>
+		<element type = "SELECT_NAV1_WHOLE"/>
+		<element type = "SELECT_NAV1_FRACTION"/>
+		<element type = "SELECT_NAV2_WHOLE"/>
+		<element type = "SELECT_NAV2_FRACTION"/>
+		<element type = "SELECT_XPNDR_1000"/>
+		<element type = "SELECT_XPNDR_0100"/>
+		<element type = "SELECT_XPNDR_0010"/>
+		<element type = "SELECT_XPNDR_0001"/>
+		<element type = "SELECT_VOR1"/>
+		<element type = "SELECT_VOR2"/>
+		<element type = "SELECT_ENGINE"/>
+		<element type = "SELECT_DME1"/>
+		<element type = "SELECT_DME2"/>
+		<element type = "SELECT_ADF_100"/>
+		<element type = "SELECT_ADF_010"/>
+		<element type = "SELECT_ADF_001"/>
+		<element type = "SELECT_EGT_BUG"/>
+		<element type = "SELECT_SIM_RATE"/>
+		<element type = "SELECT_CLOCK_HOURS"/>
+		<element type = "SELECT_CLOCK_MINUTES"/>
+		<element type = "SELECT_CLOCK_SECONDS"/>
+		<element type = "SELECT_COM2_WHOLE"/>
+		<element type = "SELECT_COM2_FRACTION"/>
+		<element type = "SELECT_ADF_TENTHS"/>
+	</ElementType>
+	<ElementType name = "SELECT_NONE" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_1" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_ZOOM" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_MAGNETO" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_COM_WHOLE" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_COM_FRACTION" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_NAV1_WHOLE" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_NAV1_FRACTION" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_NAV2_WHOLE" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_NAV2_FRACTION" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_XPNDR_1000" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_XPNDR_0100" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_XPNDR_0010" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_XPNDR_0001" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_VOR1" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_VOR2" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_ENGINE" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_DME1" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_DME2" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_ADF_100" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_ADF_010" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_ADF_001" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_EGT_BUG" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_SIM_RATE" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_CLOCK_HOURS" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_CLOCK_MINUTES" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_CLOCK_SECONDS" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_COM2_WHOLE" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_COM2_FRACTION" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "SELECT_ADF_TENTHS" content = "empty" model = "closed">
+		<AttributeType name = "Start" dt:type = "int" required = "yes"/>
+		<AttributeType name = "End" dt:type = "int" required = "yes"/>
+		<attribute type = "Start"/>
+		<attribute type = "End"/>
+	</ElementType>
+	<ElementType name = "Failures" content = "eltOnly" order = "many" model = "closed">
+		<element type = "FAIL_SYSTEM_ENGINE"/>
+		<element type = "FAIL_SYSTEM_PITOT_STATIC"/>
+		<element type = "FAIL_SYSTEM_VACUUM"/>
+		<element type = "FAIL_GAUGE_ADF"/>
+		<element type = "FAIL_GAUGE_AIRSPEED"/>
+		<element type = "FAIL_GAUGE_ALTIMETER"/>
+		<element type = "FAIL_GAUGE_ATTITUDE"/>
+		<element type = "FAIL_GAUGE_COMMUNICATIONS"/>
+		<element type = "FAIL_GAUGE_FUEL_INDICATORS"/>
+		<element type = "FAIL_GAUGE_GYRO_HEADING"/>
+		<element type = "FAIL_GAUGE_MAGNETIC_COMPASS"/>
+		<element type = "FAIL_GAUGE_NAVIGATION"/>
+		<element type = "FAIL_GAUGE_NAVIGATION_VOR1"/>
+		<element type = "FAIL_GAUGE_NAVIGATION_VOR2"/>
+		<element type = "FAIL_GAUGE_NAVIGATION_BOTH"/>
+		<element type = "FAIL_GAUGE_TRANSPONDER"/>
+		<element type = "FAIL_GAUGE_TURN_COORDINATOR"/>
+		<element type = "FAIL_GAUGE_VERTICAL_SPEED"/>
+		<element type = "FAIL_SYSTEM_ELECTRICAL_PANELS"/>
+		<element type = "FAIL_SYSTEM_ELECTRICAL_AVIONICS"/>
+	</ElementType>
+	<ElementType name = "FAIL_SYSTEM_ENGINE" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_SYSTEM_PITOT_STATIC" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_SYSTEM_VACUUM" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_ADF" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_AIRSPEED" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_ALTIMETER" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_ATTITUDE" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_COMMUNICATIONS" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_FUEL_INDICATORS" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_GYRO_HEADING" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_MAGNETIC_COMPASS" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_NAVIGATION" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_NAVIGATION_VOR1" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_NAVIGATION_VOR2" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_NAVIGATION_BOTH" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_TRANSPONDER" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_TURN_COORDINATOR" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_GAUGE_VERTICAL_SPEED" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_SYSTEM_ELECTRICAL_PANELS" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "FAIL_SYSTEM_ELECTRICAL_AVIONICS" content = "empty" model = "closed">
+		<AttributeType name = "Action" dt:type = "string" required = "yes"/>
+		<attribute type = "Action"/>
+	</ElementType>
+	<ElementType name = "Position" content = "empty" model = "closed">
+		<AttributeType name = "X" dt:type = "number" required = "yes"/>
+		<AttributeType name = "Y" dt:type = "number" required = "yes"/>
+		<attribute type = "X"/>
+		<attribute type = "Y"/>
+	</ElementType>
+	<ElementType name = "Visible" content = "textOnly" model = "closed"/>
+	<ElementType name = "Select" content = "eltOnly" order = "seq" model = "closed">
+		<element type = "Value"/>
+		<element type = "Delay" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Failures" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Image" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Case" minOccurs = "1" maxOccurs = "*"/>
+	</ElementType>
+	<ElementType name = "Value" content = "textOnly" model = "closed">
+		<AttributeType name = "Minimum" dt:type = "string"/>
+		<AttributeType name = "Maximum" dt:type = "string"/>
+		<attribute type = "Minimum"/>
+		<attribute type = "Maximum"/>
+	</ElementType>
+	<ElementType name = "Delay" content = "empty" model = "closed">
+		<AttributeType name = "ValuePerSecond" dt:type = "number"/>
+		<AttributeType name = "DegreesPerSecond" dt:type = "number"/>
+		<AttributeType name = "RadiansPerSecond" dt:type = "number"/>
+		<AttributeType name = "PixelsPerSecond" dt:type = "number"/>
+		<attribute type = "ValuePerSecond"/>
+		<attribute type = "DegreesPerSecond"/>
+		<attribute type = "RadiansPerSecond"/>
+		<attribute type = "PixelsPerSecond"/>
+	</ElementType>
+	<ElementType name = "Case" content = "eltOnly" order = "seq" model = "closed">
+		<AttributeType name = "Value" dt:type = "string"/>
+		<AttributeType name = "Minimum" dt:type = "number"/>
+		<AttributeType name = "Maximum" dt:type = "number"/>
+		<attribute type = "Value"/>
+		<attribute type = "Minimum"/>
+		<attribute type = "Maximum"/>
+		<element type = "Image"/>
+	</ElementType>
+	<ElementType name = "SelectRange" content = "eltOnly" order = "seq" model = "closed">
+		<element type = "Value"/>
+		<element type = "Delay" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Failures" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Image" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Case" minOccurs = "1" maxOccurs = "*"/>
+	</ElementType>
+	<ElementType name = "Shift" content = "eltOnly" order = "seq" model = "closed">
+		<element type = "Value"/>
+		<element type = "Center" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Nonlinearity" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Scale" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Limit" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Delay" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Failures" minOccurs = "0" maxOccurs = "1"/>
+	</ElementType>
+	<ElementType name = "Center" content = "empty" model = "closed">
+		<AttributeType name = "X" dt:type = "number" required = "yes"/>
+		<AttributeType name = "Y" dt:type = "number" required = "yes"/>
+		<attribute type = "X"/>
+		<attribute type = "Y"/>
+	</ElementType>
+	<ElementType name = "Scale" content = "empty" model = "closed">
+		<AttributeType name = "X" dt:type = "number" required = "yes"/>
+		<AttributeType name = "Y" dt:type = "number" required = "yes"/>
+		<attribute type = "X"/>
+		<attribute type = "Y"/>
+	</ElementType>
+	<ElementType name = "Limit" content = "empty" model = "closed">
+		<AttributeType name = "Top" dt:type = "number" required = "yes"/>
+		<AttributeType name = "Left" dt:type = "number" required = "yes"/>
+		<AttributeType name = "Bottom" dt:type = "number"/>
+		<AttributeType name = "Right" dt:type = "number"/>
+		<AttributeType name = "Width" dt:type = "number"/>
+		<AttributeType name = "Height" dt:type = "number"/>
+		<attribute type = "Top"/>
+		<attribute type = "Left"/>
+		<attribute type = "Bottom"/>
+		<attribute type = "Right"/>
+		<attribute type = "Width"/>
+		<attribute type = "Height"/>
+	</ElementType>
+	<ElementType name = "Rotate" content = "eltOnly" order = "seq" model = "closed">
+		<element type = "Value"/>
+		<element type = "Center"/>
+		<element type = "Nonlinearity" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Scale" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Limit" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Delay" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Failures" minOccurs = "0" maxOccurs = "1"/>
+	</ElementType>
+	<ElementType name = "Clip" content = "empty" model = "closed">
+		<AttributeType name = "Top" dt:type = "number"/>
+		<AttributeType name = "Left" dt:type = "number"/>
+		<AttributeType name = "Bottom" dt:type = "number"/>
+		<AttributeType name = "Right" dt:type = "number"/>
+		<AttributeType name = "Width" dt:type = "number"/>
+		<AttributeType name = "Height" dt:type = "number"/>
+		<attribute type = "Top"/>
+		<attribute type = "Left"/>
+		<attribute type = "Bottom"/>
+		<attribute type = "Right"/>
+		<attribute type = "Width"/>
+		<attribute type = "Height"/>
+	</ElementType>
+	<ElementType name = "Mouse" content = "eltOnly" order = "seq" model = "closed">
+		<element type = "Help" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Tooltip" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Cursor" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Click" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Area" minOccurs = "0" maxOccurs = "*"/>
+	</ElementType>
+	<ElementType name = "Area" content = "eltOnly" order = "seq" model = "closed">
+		<AttributeType name = "Top" dt:type = "number" required = "yes"/>
+		<AttributeType name = "Left" dt:type = "number" required = "yes"/>
+		<AttributeType name = "Bottom" dt:type = "number"/>
+		<AttributeType name = "Right" dt:type = "number"/>
+		<AttributeType name = "Width" dt:type = "number"/>
+		<AttributeType name = "Height" dt:type = "number"/>
+		<attribute type = "Top"/>
+		<attribute type = "Left"/>
+		<attribute type = "Bottom"/>
+		<attribute type = "Right"/>
+		<attribute type = "Width"/>
+		<attribute type = "Height"/>
+		<element type = "Help" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Tooltip" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Cursor" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Click" minOccurs = "0" maxOccurs = "1"/>
+		<element type = "Area" minOccurs = "0" maxOccurs = "*"/>
+	</ElementType>
+	<ElementType name = "Help" content = "empty" model = "closed">
+		<AttributeType name = "ID" dt:type = "string" required = "yes"/>
+		<attribute type = "ID"/>
+	</ElementType>
+	<ElementType name = "Tooltip" content = "textOnly" model = "closed">
+		<AttributeType name = "ID" dt:type = "string"/>
+		<AttributeType name = "MetricID" dt:type = "string"/>
+		<AttributeType name = "EnglishID" dt:type = "string"/>
+		<attribute type = "ID"/>
+		<attribute type = "MetricID"/>
+		<attribute type = "EnglishID"/>
+	</ElementType>
+	<ElementType name = "Cursor" content = "empty" model = "closed">
+		<AttributeType name = "Type" dt:type = "enumeration" dt:values = "None Normal UpArrow DownArrow LeftArrow RightArrow Hand Crosshair" default = "Normal"/>
+		<attribute type = "Type"/>
+	</ElementType>
+	<ElementType name = "Click" content = "textOnly" model = "closed">
+		<AttributeType name = "Kind" dt:type = "string" default = "LeftSingle"/>
+		<AttributeType name = "Repeat" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "MouseWheelFlip" dt:type = "enumeration" dt:values = "Yes No" default = "No"/>
+		<AttributeType name = "Event" dt:type = "string"/>
+		<attribute type = "Kind"/>
+		<attribute type = "Repeat"/>
+		<attribute type = "MouseWheelFlip"/>
+		<attribute type = "Event"/>
+	</ElementType>
+</Schema>

@@ -1,0 +1,214 @@
+﻿Build started 10/05/2011 06:57:21.
+     1>Project "C:\Users\user\Documents\Visual Studio 2010\Projects\IFly_737NG_Gauges\737NG_SDK_EXE.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\IFly_737NG_Gauges.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c Source\IFLY_NG_GAUGE_PLUGIN.Sound.c Source\UIPCHello.c
+         IFLY_NG_GAUGE_PLUGIN.AddIns.c
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(7): error C2065: 'GAUGE_NAME' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(7): error C2099: initializer is not a constant
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(8): error C2061: syntax error : identifier 'addins_list'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(8): error C2059: syntax error : ';'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(9): error C2061: syntax error : identifier 'addins_mouse_rect'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(9): error C2059: syntax error : ';'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(9): error C3409: empty attribute block is not allowed
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(9): error C2059: syntax error : ';'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(11): error C2059: syntax error : ','
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(11): error C2143: syntax error : missing ')' before '&'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(11): error C2143: syntax error : missing '{' before '&'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(11): error C2059: syntax error : '&'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(12): error C2059: syntax error : ')'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(16): error C2061: syntax error : identifier 'addins_fail'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(16): error C2059: syntax error : ';'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(16): error C3409: empty attribute block is not allowed
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(16): error C2513: '/*global*/ ' : no variable declared before '='
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(18): error C2065: 'FAIL_GAUGE_ATTITUDE' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(18): error C2065: 'FAIL_ACTION_NONE' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(19): error C2065: 'FAIL_NONE' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(19): error C2065: 'FAIL_ACTION_NONE' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(30): error C2143: syntax error : missing ')' before '|'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(30): error C2143: syntax error : missing '{' before '|'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(30): error C2059: syntax error : '|'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(38): error C2059: syntax error : ')'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(48): error C2061: syntax error : identifier 'PauseTODwasUse'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(48): error C2059: syntax error : ';'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(48): error C2513: '/*global*/ ' : no variable declared before '='
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(48): error C2065: 'FALSE' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(53): error C2065: 'hMapFileSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(53): warning C4013: 'OpenFileMapping' undefined; assuming extern returning int
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(54): error C2065: 'FILE_MAP_READ' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(55): error C2065: 'FALSE' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(56): error C2065: 'szNameSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(58): error C2065: 'hMapFileSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(58): error C2065: 'NULL' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(60): error C2065: 'pBufSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(60): error C2065: 'LPTSTR' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(60): error C2146: syntax error : missing ';' before identifier 'MapViewOfFile'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(60): warning C4013: 'MapViewOfFile' undefined; assuming extern returning int
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(60): error C2065: 'hMapFileSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(61): error C2065: 'FILE_MAP_READ' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(64): error C2065: 'BUF_SIZE_SDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(67): error C2065: 'pBufSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(69): warning C4013: 'CopyMemory' undefined; assuming extern returning int
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(69): error C2065: 'PVOID' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(69): error C2146: syntax error : missing ')' before identifier 'pShareMemSDK'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(70): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(70): error C2223: left of '->DC_AMPS_minus_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(73): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(73): error C2223: left of '->TopOfDescent_Avail' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(75): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(75): error C2223: left of '->TopOfDescent_Coord_DTG' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(75): error C2065: 'PauseTODwasUse' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(77): warning C4013: 'PlaySound' undefined; assuming extern returning int
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(77): error C2065: 'NULL' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(77): error C2065: 'SND_ASYNC' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(79): warning C4013: 'PauseFS' undefined; assuming extern returning int
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(80): error C2065: 'PauseTODwasUse' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(80): error C2065: 'TRUE' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(85): error C2065: 'PauseTODwasUse' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(85): error C2065: 'FALSE' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(90): warning C4013: 'UnmapViewOfFile' undefined; assuming extern returning int
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(90): error C2065: 'pBufSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(91): error C2065: 'pBufSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(91): error C2065: 'NULL' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(92): warning C4013: 'CloseHandle' undefined; assuming extern returning int
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(92): error C2065: 'hMapFileSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(93): error C2065: 'hMapFileSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(93): error C2065: 'NULL' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(99): error C2061: syntax error : identifier 'FSAPI'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(99): error C2059: syntax error : ';'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(99): error C2146: syntax error : missing ')' before identifier 'pelement'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(99): error C2061: syntax error : identifier 'pelement'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(99): error C2059: syntax error : ';'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(99): error C2059: syntax error : ')'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(100): error C2449: found '{' at file scope (missing function header?)
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(103): error C2059: syntax error : '}'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(137): error C2059: syntax error : ','
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(137): error C2143: syntax error : missing ')' before 'constant'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(137): error C2143: syntax error : missing '{' before 'constant'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(137): error C2059: syntax error : '<Unknown>'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(139): error C2059: syntax error : ')'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(144): error C2059: syntax error : ','
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(144): error C2143: syntax error : missing ')' before 'constant'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(144): error C2143: syntax error : missing '{' before 'constant'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(144): error C2059: syntax error : '<Unknown>'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.AddIns.c(144): error C2059: syntax error : ')'
+         IFLY_NG_GAUGE_PLUGIN.Sound.c
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(13): error C2061: syntax error : identifier 'gaugecall'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(13): error C2059: syntax error : ';'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(13): error C2146: syntax error : missing ')' before identifier 'pgauge'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(13): error C2061: syntax error : identifier 'pgauge'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(13): error C2059: syntax error : ','
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(13): error C2059: syntax error : ')'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(55): error C2065: 'GAUGE_NAME' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(55): error C2099: initializer is not a constant
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(56): error C2061: syntax error : identifier 'sound_list'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(56): error C2059: syntax error : ';'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(57): error C2061: syntax error : identifier 'sound_mouse_rect'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(57): error C2059: syntax error : ';'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(57): error C3409: empty attribute block is not allowed
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(57): error C2059: syntax error : ';'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(59): error C2059: syntax error : ','
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(59): error C2143: syntax error : missing ')' before '&'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(59): error C2143: syntax error : missing '{' before '&'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(59): error C2059: syntax error : '&'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(60): error C2059: syntax error : ')'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(64): error C2061: syntax error : identifier 'sound_fail'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(64): error C2059: syntax error : ';'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(64): error C3409: empty attribute block is not allowed
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(64): error C2513: '/*global*/ ' : no variable declared before '='
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(66): error C2065: 'FAIL_GAUGE_ATTITUDE' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(66): error C2065: 'FAIL_ACTION_NONE' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(67): error C2065: 'FAIL_NONE' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(67): error C2065: 'FAIL_ACTION_NONE' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(75): error C2059: syntax error : ','
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(75): error C2143: syntax error : missing ')' before '('
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(75): error C2143: syntax error : missing ')' before '('
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(75): error C2091: function returns function
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(75): error C2091: function returns function
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(75): error C2143: syntax error : missing '{' before 'constant'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(75): error C2059: syntax error : '<Unknown>'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(75): error C2059: syntax error : ')'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(158): warning C4013: 'CheckCockpitView' undefined; assuming extern returning int
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(160): error C2065: 'hMapFileSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(163): error C2065: 'szNameSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(163): warning C4047: 'function' : 'LPCSTR' differs in levels of indirection from 'int'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(163): warning C4024: 'OpenFileMappingA' : different types for formal and actual parameter 3
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(163): warning C4047: '=' : 'int' differs in levels of indirection from 'HANDLE'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(165): error C2065: 'hMapFileSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(165): warning C4047: '!=' : 'int' differs in levels of indirection from 'void *'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(167): error C2065: 'pBufSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(167): error C2065: 'hMapFileSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(167): warning C4022: 'MapViewOfFile' : pointer mismatch for actual parameter 1
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(171): error C2065: 'BUF_SIZE_SDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(171): warning C4047: '=' : 'int' differs in levels of indirection from 'LPTSTR'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(174): error C2065: 'pBufSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(176): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(176): error C2065: 'pBufSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(176): warning C4022: 'memcpy' : pointer mismatch for actual parameter 2
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(176): error C2027: use of undefined type 'ShareMemorySDK'
+                 Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(176) : see declaration of 'ShareMemorySDK'
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(177): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(177): error C2223: left of '->DC_AMPS_minus_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(180): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(180): error C2223: left of '->Wiper_L_Switches_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(183): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(183): error C2223: left of '->Wiper_L_Switches_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(187): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(187): error C2223: left of '->Wiper_L_Switches_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(191): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(191): error C2223: left of '->Wiper_L_Switches_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(201): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(201): error C2223: left of '->Wiper_L_Switches_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(206): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(206): error C2223: left of '->Engine_1_Start_Levers_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(211): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(211): error C2223: left of '->Engine_1_Start_Levers_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(215): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(215): error C2223: left of '->Engine_2_Start_Levers_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(218): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(218): error C2223: left of '->Engine_2_Start_Levers_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(222): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(222): error C2223: left of '->Landing_Light_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(225): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(225): error C2223: left of '->Landing_Light_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(229): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(229): error C2223: left of '->Taxi_Light_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(232): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(232): error C2223: left of '->Taxi_Light_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(236): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(236): error C2223: left of '->Panel_Light_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(239): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(239): error C2223: left of '->Panel_Light_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(243): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(243): error C2223: left of '->Logo_Light_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(246): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(246): error C2223: left of '->Logo_Light_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(250): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(250): error C2223: left of '->Anti_Collision_Light_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(253): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(253): error C2223: left of '->Anti_Collision_Light_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(257): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(257): error C2223: left of '->Wing_Light_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(260): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(260): error C2223: left of '->Wing_Light_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(264): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(264): error C2223: left of '->MCP_IASMACH_Switches_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(267): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(267): error C2223: left of '->MCP_IASMACH_Switches_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(271): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(271): error C2223: left of '->MCP_HEADING_Switches_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(274): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(274): error C2223: left of '->MCP_HEADING_Switches_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(278): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(278): error C2223: left of '->MCP_ALTIDUTE_Switches_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(281): error C2065: 'pShareMemSDK' : undeclared identifier
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(281): error C2223: left of '->MCP_ALTIDUTE_Switches_Status' must point to struct/union
+     1>Source\IFLY_NG_GAUGE_PLUGIN.Sound.c(281): fatal error C1003: error count exceeds 100; stopping compilation
+         UIPCHello.c
+     1>Source\UIPCHello.c(4): fatal error C1083: Cannot open include file: 'FSUIPC_User.h': No such file or directory
+     1>Done Building Project "C:\Users\user\Documents\Visual Studio 2010\Projects\IFly_737NG_Gauges\737NG_SDK_EXE.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.65
